@@ -1,8 +1,8 @@
 //coin change
 #include<bits/stdc++.h>
 using namespace std;
-int dp[1000001];
-int fun(int n,vector<int>&a,int m)
+long long dp[1000001];
+int fun(long long n,vector<long long>&a,long long m)
 {
     if(n==0)return 0;
     if(dp[n]!=-1)return dp[n];
@@ -18,10 +18,10 @@ int fun(int n,vector<int>&a,int m)
 }
 int main()
 {
-    int n,m;
+    long long n,m;
     cin>>n>>m;
     memset(dp,-1,sizeof(dp));
-    vector<int>a(m);
+    vector<long long>a(m);
     for(int i=0;i<m;i++)
     {
         cin>>a[i];
